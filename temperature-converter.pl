@@ -2,7 +2,7 @@ print "Enter a temperature in Celsius:\n";
 $input = <STDIN>;
 chomp($input);
 
-if ($input =~ m/^([-+]?[0-9]+([\.0-9]*)?)([CF])$/) {
+if ($input =~ m/^([-+]?[0-9]+([\.0-9]*)?[ \t]*)([CF])$/) {
     $temp = $1;
     $type = $3;
 
