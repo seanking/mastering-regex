@@ -15,5 +15,5 @@ if ($input =~ m/^([-+]?[0-9]+([\.0-9]*)?)([CF])$/) {
     }
 
 } else {
-    print "Expecting a number, so I don't understand \"$input\".\n";
+    print "Expecting a number followed by 'C' or 'F'.\n";
 }
