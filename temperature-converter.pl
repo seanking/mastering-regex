@@ -2,11 +2,11 @@ print "Enter a temperature in Celsius:\n";
 $input = <STDIN>;
 chomp($input);
 
-if ($input =~ m/^([-+]?[0-9]+(?:[\.0-9]*)?\s*)([CF])$/i) {
+if ($input =~ m/^([-+]?[0-9]+(?:[\.0-9]*)?\s*)([cf])$/i) {
     $temp = $1;
     $type = $2;
 
-    if ($type eq 'C') {
+    if ($type =~ m/c/i) {
         $fahrenhiet = ($temp * 9/5) + 32;
         printf "%.2f C is %.2f F.\n", $temp, $fahrenhiet;
     } else {
