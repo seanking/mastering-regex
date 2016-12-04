@@ -2,9 +2,9 @@ print "Enter a temperature in Celsius:\n";
 $input = <STDIN>;
 chomp($input);
 
-if ($input =~ m/^([-+]?[0-9]+([\.0-9]*)?[ \t]*)([CFcf])$/) {
+if ($input =~ m/^([-+]?[0-9]+(?:[\.0-9]*)?[ \t]*)([CFcf])$/) {
     $temp = $1;
-    $type = $3;
+    $type = $2;
 
     if ($type eq 'C') {
         $fahrenhiet = ($temp * 9/5) + 32;
