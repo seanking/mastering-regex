@@ -22,6 +22,9 @@ while ($line = <>) {
     }
 }
 
+if ( not defined($subject) or not defined($date) or not defined($reply_address) or not defined($from_name)) {
+   die "Couldn't find the required information"; 
+}
 
 print "To: $reply_address\n";
 print "From: test\@test.com (Test Test)\n"; 
