@@ -30,7 +30,8 @@ print "\n";
 print "On $date $from_name wrote: \n";
 
 while ($line = <>) {
-    print "|> $line";
+    $line =~ s/^/|> /;
+    print $line;
 }
 
 print "\n";
